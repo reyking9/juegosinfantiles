@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Colorea las flechas</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="../js/jquery-3.2.1.min.js"></script>
+
+</head>
+
+<body onmousemove="playMusic()" >
+
+<!--     <div id="fondo"> <img src="../img/FONDOS/Fondo_pintar_figuras.png" /> </div>
+ -->    <audio id="divAudio">
+       <source src="../media/fondo_flechas.mp3" type="audio/mp3">
+    </audio>
+    
+    <script>
+       var vAudio = document.getElementById("divAudio");
+       function playMusic()
+       {
+          vAudio.play();
+          vAudio.loop = true;
+   
+       }
+    </script>
+
+    <div id="fondo_2"> <img id="rompecabezas" src="../img/FONDOS/Recursos_flechas/Fondo.png" /></div>
+
+    <div id="conjunto">
+
+        <div id="contenedor" style="top:10px;left: 340px;">
+    <svg  width="850" height="900" id="entorno">
+
+	 
+        <!-- inicio -->
+        <rect  x="130" y="25" height="200" width="600" stroke-width="4" stroke="Black" fill="grey"  rx="20" ry="20" ></rect> <!--Mano derecha-->
+        <path  d="M 530 100 L 530 150 L 630 150 L 630 175 L 680 125 L 630 75 L 630 100 L 530 100" stroke="black" stroke-width="5" fill="rgb(89,32,182)" onclick="Morado()" style="cursor: pointer;"/>
+        <path d="M 330 100 L 330 150 L 230 150 L 230 175 L 180 125 L 230 75 L 230 100 L 330 100" stroke="black" stroke-width="5" fill="rgb(61,205,25)" onclick="Verde()" style="cursor: pointer;"/>
+        <text x="170" y="60" fill="none" stroke="#00f" stroke-width="2" style="font-size: 40px">Izquierda</text>
+        <text x="550" y="60" fill="none" stroke="#00f" stroke-width="2" style="font-size: 40px">Derecha</text>
+
+        <!--  Direccion izquierda -->
+    <path class="izquierda" id="flechai1" d="M 500 300 L 500 350 L 400 350 L 400 375 L 350 325 L 400 275 L 400 300 L 500 300" stroke="black" stroke-width="5" fill="white"/>
+    <path class="izquierda" id="flechai2" d="M 200 300 L 200 350 L 100 350 L 100 375 L  50 325 L 100 275 L 100 300 L 200 300" stroke="black" stroke-width="5" fill="white"/>       
+    <path class="izquierda" id="flechai7" d="M 500 500 L 500 550 L 400 550 L 400 575 L 350 525 L 400 475 L 400 500 L 500 500" stroke="black" stroke-width="5" fill="white"/>
+   <path class="izquierda" id="flechai3" d="M 750 500 L 750 550 L 650 550 L 650 575 L 600 525 L 650 475 L 650 500 L 750 500" stroke="black" stroke-width="5" fill="white"/>
+   <path class="izquierda" id="flechai4" d="M 400 600 L 400 650 L 300 650 L 300 675 L 250 625 L 300 575 L 300 600 L 400 600" stroke="black" stroke-width="5" fill="white"/>
+   <path class="izquierda" id="flechai5" d="M 650 600 L 650 650 L 550 650 L 550 675 L 500 625 L 550 575 L 550 600 L 650 600" stroke="black" stroke-width="5" fill="white"/>
+   <path class="izquierda" id="flechai6" d="M 200 700 L 200 750 L 100 750 L 100 775 L  50 725 L 100 675 L 100 700 L 200 700" stroke="black" stroke-width="5" fill="white"/>
+
+
+   <!--Direccion derecha-->
+
+       
+       <path class="derecha" id="flechad1" d="M 400 700 L 400 750 L 500 750 L 500 775 L 550 725 L 500 675 L 500 700 L 400 700" stroke="black" stroke-width="5" fill="white"/> 
+       <path class="derecha" id="flechad2" d="M 650 700 L 650 750 L 750 750 L 750 775 L 800 725 L 750 675 L 750 700 L 650 700" stroke="black" stroke-width="5" fill="white"/>
+       <path class="derecha" id="flechad3" d="M 100 500 L 100 550 L 200 550 L 200 575 L  250 525 L 200 475 L 200 500 L 100 500" stroke="black" stroke-width="5" fill="white"/>
+        <path class="derecha" id="flechad4" d="M 225 400 L 225 450 L 325 450 L 325 475 L 375 425 L 325 375 L 325 400 L 225 400" stroke="black" stroke-width="5" fill="white"/>
+        <path class="derecha" id="flechad5" d="M 525 400 L 525 450 L 625 450 L 625 475 L 675 425 L 625 375 L 625 400 L 525 400" stroke="black" stroke-width="5" fill="white"/>
+        <path class="derecha" id="flechad6" d="M 650 300 L 650 350 L 750 350 L 750 375 L 800 325 L 750 275 L 750 300 L 650 300" stroke="black" stroke-width="5" fill="white"/>
+        <g id="ganadorr" style="display: none;"><image xlink:href="../img/FONDOS/Recursos_flechas/ganador.gif" width="600" height="600" x="130" y="100"></g> 
+            <!--Botones-->
+
+            <g onclick="location.reload()" style="cursor: pointer;" ><image xlink:href="../img/FONDOS/Recursos_rompecabezas/Reintentar.png" x= "0" y="50" height="100" x="100"></g>
+                <g onclick="location.href='../html/menu.html'"  style="cursor: pointer;"><image xlink:href="../img/FONDOS/Recursos_rompecabezas/Regresar.png" x= "750" y="50" height="100" x="100"></g>
+            
+    </svg>
+</div>
+</div>
+<audio id="win" src="../media/ganador.mp3"></audio>
+    <audio id="lose" src="../media/equivocarse2.mp3"></audio>
+
+    <script src="../js/flechas.js">
+    </script>
+</body>

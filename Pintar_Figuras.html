@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<script src="js/jquery-3.2.1.min.js"></script>
+
+<head>
+    <meta charset="uft-8">
+    <title>Pintar Correcto</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <div id="conjunto">
+        <div id="contenedor">
+
+            <div id="botones_colores">
+                <button class="boton_rojo" onclick="Rojo()"> </button>
+                <button class="boton_verde" onclick="Verde()"></button>
+                <button class="boton_azul" onclick="Azul()"></button>
+                <button class="boton_celeste" onclick="Celeste()"></button>
+                <button class="boton_naranja" onclick="Naranja()"></button>
+                <button class="boton_amarillo" onclick="Amarillo()"></button>
+            </div>
+            <svg width="700" height="950">
+                <!-- Circulos -->
+               
+                
+                    <circle class="circulo" id=circulo1 cx="300" cy="200" r="60" stroke="black" stroke-width="4" fill="white" /> <!--Cabeza-->
+                    <circle class="circulo" id=circulo2 cx="470" cy="200" r="30" stroke="black" stroke-width="4" fill="white"/> <!--Mano izquierda-->
+                    <circle class="circulo" id=circulo3 cx="470" cy="40" r="25" stroke="black" stroke-width="4" fill="white"  /> <!-- Malabar izquierdo-->
+                    <circle class="circulo" id=circulo4 cx="400" cy="30" r="25" stroke="black" stroke-width="4" fill="white"  /> <!-- Malabar izquierdo-->
+                    <circle class="circulo" id=circulo5 cx="100" cy="300" r="30" stroke="black" stroke-width="4" fill="white"  /> <!--Mano derecha-->
+                    <circle class="circulo" id=circulo6 cx="60" cy="120" r="25" stroke="black" stroke-width="4" fill="white"/> 
+                    <circle class="circulo" id=circulo7 cx="80" cy="50" r="25" stroke="black" stroke-width="4" fill="white" />
+                    <circle class="circulo" id=circulo8 cx="140" cy="80" r="25" stroke="black" stroke-width="4" fill="white" />
+                    <circle class="circulo" id=circulo9 cx="170" cy="630" r="40" stroke="black" stroke-width="4" fill="white" />
+                    <circle class="circulo" id=circulo10 cx="490" cy="650" r="40" stroke="black" stroke-width="4" fill="white" />
+                   
+                    <!-- Cara-->
+                    <circle cx="280" cy="180" r="10" stroke="black" stroke-width="4" fill="black" onclick= "alert('¡Has hecho clic!')"/>
+                    <circle cx="330" cy="180" r="10" stroke="black" stroke-width="4" fill="black" onclick= "alert('¡Has hecho clic!')"/>
+                
+                    <!-- Cuadrados -->
+            <rect class="cuadrado" id=cuadrado1 transform="rotate(45 430 210)" x="430" y="210" height="100" width="50" stroke-width="4" stroke="Black" fill="white" ></rect>
+            <rect class="cuadrado" id=cuadrado2 transform="rotate(290 130 340)" x="130" y="340" height="100" width="50" stroke-width="4" stroke="Black" fill="white" ></rect>
+            <rect class="cuadrado" id=cuadrado3 transform="rotate(55 280 530)" x="280" y="530" height="100" width="50" stroke-width="4" stroke="Black" fill="white" ></rect>
+            <rect class="cuadrado" id=cuadrado4 transform="rotate(-50 360 570)" x="360" y="570" height="100" width="50" stroke-width="4" stroke="Black" fill="white" ></rect>
+            <rect class="cuadrado" id=cuadrado5 transform="rotate(40 440 680)" x="440" y="680" height="100" width="50" stroke-width="4" stroke="Black" fill="white" ></rect>
+            <rect class="cuadrado" id=cuadrado6 transform="rotate(40 440 680)" x="440" y="680" height="100" width="50" stroke-width="4" stroke="Black" fill="white" ></rect> <!--Pierna Derecha-->
+            <rect class="cuadrado" id=cuadrado7 transform="rotate(-35 170 690)" x="170" y="690" height="100" width="50" stroke-width="4" stroke="Black" fill="white" ></rect> <!--Pierna Izquierda-->
+            <rect class="cuadrado" id=cuadrado8 transform="rotate(-10 60 220)" x="60" y="220" height="50" width="50" stroke-width="4" stroke="Black" fill="white" ></rect> <!--Mano derecha-->
+            <rect class="cuadrado" id=cuadrado9 transform="rotate(-10 60 220)" x="60" y="220" height="50" width="50" stroke-width="4" stroke="Black" fill="white" ></rect> <!--Mano derecha-->
+            <rect class="cuadrado" id=cuadrado10 transform="rotate(5 460 110)" x="460" y="110" height="50" width="50" stroke-width="4" stroke="Black" fill="white" ></rect> <!--Mano derecha-->
+                 
+        <!--Sonrrisa-->
+                <path d="M 270 230 C 270 250  330 250 330 230 M 190 150 z"
+                      stroke="black" stroke-width=3 fill="white"  />
+               
+            
+            <!-- Elipse-->
+                <ellipse class="elipse" id=elipse1 transform="rotate(-15 320 360)" cx="320" cy="380" rx="65" ry="110" stroke-width="4" stroke="Black" fill="white" />
+            <!-- Triangulos-->
+            <polygon  class="triangulo" id=triangulo1 points="270,490 420, 500 330, 590"
+            stroke="black" stroke-width=4 fill="white"/>  <!-- Cadera-->
+            <polygon class="triangulo" id=triangulo2 points="300, 190 310, 205 290, 205" 
+            stroke="black" stroke-width=3 fill="white"/> <!--Nariz-->
+            <polygon class="triangulo" id=triangulo3 points="300, 120 370, 170 400, 75"
+            stroke="black" stroke-width=4 fill="white"/> <!-- Sombrero-->
+            <polygon class="triangulo" id=triangulo4 points="450, 760 500, 830 420, 830"
+            stroke="black" stroke-width=4 fill="white"/> <!-- Pie derecho-->
+            <polygon class="triangulo" id=triangulo5 points="170, 770 250, 790 180, 830"
+            stroke="black" stroke-width=4 fill="white"/> <!-- Pie izquierdo-->
+            <!-- Rombo-->
+            <polygon id=rombo1 transform="rotate(-15 320 330)" points="320,330 360,380 320,430 280,380"
+            stroke="black" stroke-width=4 fill="white"/>
+            </svg>
+            <canvas id="lienzo" width="300" height="950"></canvas>
+        </div>
+    </div>
+
+
+    <script src="js/Pintar_figuras.js">
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+
+<head>
+    <title>Menu</title>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body onmousemove="playMusic()">
+
+    <audio id="divAudio">
+        <source src="../media/fondo_menu1.mp3" type="audio/mp3">
+     </audio>
+     
+     <script>
+        var vAudio = document.getElementById("divAudio");
+        function playMusic()
+        {
+           vAudio.play();
+        }
+     </script>
+    <div id="principal">
+        <div id="fondo"> <img src="../FONDO_INICIO.jpg"  style="width:100%;" /> </div>
+        <div id="prueba">
+        <div id="botones_menu>">
+            <a href="../html/Pintar_Figuras.html"><img id="menu_1" src="../img/Pintar_1/BOTONES_MENU/colorea_indica_2.png" ></a>
+            <a href="../html/rompecabezas.html"><img id="menu_2" src="../img/Pintar_1/BOTONES_MENU/Rompecabezas_normal_2.png" ></a>
+            <a href="../html/juego_pares.html"><img id="menu_3" src="../img/Pintar_1/BOTONES_MENU/Encuentra_iguales_2.png" ></a>
+           <a href="../html/dia_noche.html"><img id="menu_4" src="../img/Pintar_1/BOTONES_MENU/nocion_tiempo_2.png" ></a>
+            <a href="../html/flechas.html"><img id="menu_5" src="../img/Pintar_1/BOTONES_MENU/colorea_flechas_2.png"></a>
+           <a href="../html/seguir_patron.html"><img id="menu_6" src="../img/Pintar_1/BOTONES_MENU/seguir_logica_2.png"></a>
+            <a href="../html/uni_lineas.html"><img id="menu_7" src="../img/Pintar_1/BOTONES_MENU/unir_lineas_2.png"></a> 
+        </div>
+    </div></div>
+    <script src="../js/sonidos.js">
+    </script>
+        </script>
+        <script src="../js/audio.js">
+        </script>
+</body>
+
+</html>

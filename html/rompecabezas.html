@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+    <script src="../js/jquery-3.2.1.min.js"></script>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Rompecabezas</title>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+
+<body style="background-color: bisque; height:4%; width:80%;" onmousemove="playMusic()">
+
+    <audio id="divAudio">
+       <source src="../media/fondo_rompecabezas.mp3" type="audio/mp3">
+    </audio>
+    
+    <script>
+       var vAudio = document.getElementById("divAudio");
+       function playMusic()
+       {
+          vAudio.play();
+          vAudio.loop = true;
+   
+       }
+    </script>
+
+
+
+
+    <svg id="entorno" >
+
+
+	<g id="fondo_ro"><image xlink:href="../img/tren.png" ></g>
+<g  class="padre" id="0"><image xlink:href="../img/11.png" class="movil"></g>
+<g   class="padre" id="1"><image xlink:href="../img/22.png" class="movil"></g>
+<g class="padre" id="2"><image xlink:href="../img/33.png" class="movil"></g>
+<g class="padre" id="3"><image xlink:href="../img/44.png" class="movil"></g>
+<g  class="padre" id="4"><image xlink:href="../img/55.png" class="movil"></g>
+<g  class="padre" id="5"><image xlink:href="../img/66.png" class="movil"></g>
+<g  class="padre" id="6"><image xlink:href="../img/77.png" class="movil"></g>
+<g  class="padre" id="7"><image xlink:href="../img/88.png" class="movil"></g>
+<g  class="padre" id="8"><image xlink:href="../img/99.png" class="movil"></g>
+    
+
+    <g style="display: none;" id = "win1"><image xlink:href="../img/FONDOS/Recursos_rompecabezas/ganar.gif"></g>
+    <g style="display: none;" id = "win2" ><image xlink:href="../img/FONDOS/Recursos_rompecabezas/ganar_2.gif" x= "10" y="700"></g>
+        <g style="display: none;" id = "win3"><image xlink:href="../img/FONDOS/Recursos_rompecabezas/ganar_3.gif" x= "500" y="0"></g>
+    <g onclick="location.reload()" style="cursor: pointer;" id = "reintentar"><image xlink:href="../img/FONDOS/Recursos_rompecabezas/Reintentar.png"></g>
+    <g onclick="location.href='../html/menu.html'" style="cursor: pointer;" id ="regresar"><image xlink:href="../img/FONDOS/Recursos_rompecabezas/Regresar.png" ></g>
+
+ 
+
+
+</svg>
+    <audio id="win" src="../media/ganador.mp3"></audio>
+    <audio id="lose" src="../media/equivocarse2.mp3"></audio>
+
+
+   
+        
+           
+    <script id = "dispositivo" type="text/javascript" src="../js/rompecabezas - movil.js"></script>
+</body> 
+
+
+
+

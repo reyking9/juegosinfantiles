@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<script src="../js/jquery-3.2.1.min.js"></script>
+
+<head>
+    <meta charset="uft-8">
+    <title>Seguir Patrón</title>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+
+<body onmousemove="playMusic()">
+    <audio id="divAudio">
+       <source src="../media/fondo_patron.mp3" type="audio/mp3">
+    </audio>
+    
+    <script>
+       var vAudio = document.getElementById("divAudio");
+       function playMusic()
+       {
+        vAudio.volume = 0.4;
+          vAudio.play();
+          vAudio.loop = true;
+   
+       }
+    </script>
+    <div id="fondo_2"> <img id="rompecabezas" src="../img/FONDOS/Seguir patron/FONDO.png" /></div>
+
+    <div id="conjunto">
+
+        <div id="contenedor" style="top:10px;left: 340px;">
+            <svg width="900" height="950" x=500     >
+                    <g><image xlink:href="../img/Pintar_1/COLORES/Amarillo.png" width="150" height="150" x="100" y="50" onclick="Amarillo()" ></g>
+                    <g><image xlink:href="../img/Pintar_1/COLORES/Rojo.png" width="150" height="150" x="300" y="50" onclick="Rojo()"></g>
+                    <g><image xlink:href="../img/Pintar_1/COLORES/Azul.png" width="150" height="150" x="500" y="50" onclick="Azul()" ></g>
+                    <!-- Triangulos-->
+                    <polygon points="100, 250 70, 300 130, 300"
+                        stroke="black" stroke-width=4 fill="blue"/> 
+                    <!-- Circulos -->
+                    <circle cx="200" cy="275" r="30" stroke="black" stroke-width="4" fill="red" /> 
+                    <!-- Cuadrados -->
+                    <rect x="280" y="250" height="50" width="50" stroke-width="4" stroke="Black" fill="yellow" ></rect>   
+                    <!-- Triangulos-->
+                    <polygon class="triangulo" id ="1" points="425, 250 395, 300 455, 300"
+                    stroke="black" stroke-width=4 fill="white"/>
+                    <!-- Circulos -->
+                    <circle class="circulo" id ="2" cx="525" cy="275" r="30" stroke="black" stroke-width="4" fill="white" /> <!--Cabeza-->
+                    <!-- Cuadrados -->
+                    <rect class="cuadrado" id ="3" x="600" y="250" height="50" width="50" stroke-width="4" stroke="Black" fill="white" ></rect>   
+                    <!-- triangulo -->
+                    <polygon class="triangulo" id ="4" points="750, 250 720, 300 780, 300"
+                    stroke="black" stroke-width=4 fill="white"/> 
+                     <!-- Circulos -->
+                     <circle class="circulo" id ="5" cx="750" cy="375" r="30" stroke="black" stroke-width="4" fill="white" /> 
+                     <!-- Cuadrados -->
+                     <rect class="cuadrado" id ="6" x="725" y="450" height="50" width="50" stroke-width="4" stroke="Black" fill="white" ></rect>   
+                    <!-- triangulo -->
+                    <polygon class="triangulo" id ="7" points="625, 450 595, 500 655, 500"
+                    stroke="black" stroke-width=4 fill="white"/> 
+                          <!-- Circulos -->
+                     <circle class="circulo" id ="8" cx="525" cy="475" r="30" stroke="black" stroke-width="4" fill="white" /> 
+                     <!-- Cuadrados -->
+                     <rect class="cuadrado" id ="9" x="400" y="450" height="50" width="50" stroke-width="4" stroke="Black" fill="white" ></rect>   
+                    <!-- triangulo -->
+                    <polygon class="triangulo" id ="10" points="325, 450 295, 500 355, 500"
+                    stroke="black" stroke-width=4 fill="white"/> 
+                          <!-- Circulos -->
+                     <circle class="circulo" id ="11" cx="225" cy="475" r="30" stroke="black" stroke-width="4" fill="white" /> 
+                 <!-- Cuadrados -->
+                 <rect class="cuadrado" id ="12" x="200" y="550" height="50" width="50" stroke-width="4" stroke="Black" fill="white" ></rect>   
+                  <!-- triangulo -->
+                  <polygon class="triangulo" id ="13" points="225, 650 195, 700 255, 700"
+                  stroke="black" stroke-width=4 fill="white"/> 
+                    <!-- Circulos -->
+                    <circle class="circulo" id ="14" cx="225" cy="775" r="30" stroke="black" stroke-width="4" fill="white" /> 
+               <!-- Cuadrados -->
+               <rect class="cuadrado" id ="15" x="295" y="750" height="50" width="50" stroke-width="4" stroke="Black" fill="white" ></rect>   
+                 <!-- triangulo -->
+                 <polygon class="triangulo" id ="16" points="425, 750 395, 800 455, 800"
+                 stroke="black" stroke-width=4 fill="white"/> 
+                     <!-- Circulos -->
+                 <circle class="circulo" id ="17" cx="525" cy="775" r="30" stroke="black" stroke-width="4" fill="white" /> 
+              <!-- Cuadrados -->
+              <rect x="595" y="750" height="50" width="50" stroke-width="4" stroke="Black" fill="yellow" ></rect>   
+          <!-- triangulo -->
+          <polygon  points="725, 750 695, 800 755, 800"
+          stroke="black" stroke-width=4 fill="blue"/> 
+               <!-- Circulos -->
+               <circle  cx="725" cy="875" r="30" stroke="black" stroke-width="4" fill="red" /> 
+            
+               <g  id = "win1" style="display : none;"><image xlink:href="../img/gano.gif" width="500" height="650"  x= "200" y="150"></g>
+                <g onclick="location.reload()" style="cursor: pointer;" ><image xlink:href="../img/FONDOS/Recursos_rompecabezas/Reintentar.png" x= "750" y="120" height="100" x="100"></g>
+                <g onclick="location.href='../html/menu.html'"  style="cursor: pointer;"><image xlink:href="../img/FONDOS/Recursos_rompecabezas/Regresar.png" x= "750" y="10" height="100" x="100"></g>
+            
+                 
+                    </svg>
+                    </div>
+                     </div>
+
+                     <audio id="win" src="../media/ganador.mp3"></audio>
+                     <audio id="lose" src="../media/equivocarse2.mp3"></audio>
+ <script src="../js/seguir_patron.js">
+    </script> 
+
+</body>
+
+</html>

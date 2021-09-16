@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Unir con líneas</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="../js/jquery-3.2.1.min.js"></script>
+
+</head>
+
+<body onmousemove="playMusic()" >
+     
+    <audio id="divAudio">
+       <source src="../media/fondo_unir.mp3" type="audio/mp3">
+    </audio>
+        <script>
+       var vAudio = document.getElementById("divAudio");
+       function playMusic()
+       {
+          vAudio.play();
+          vAudio.loop = true;
+   
+       }
+    </script>
+        <div id="fondo_2"> <img id="rompecabezas" src="../img/UNIR CON LINEAS/FONDO.png" /></div>
+
+    <div id="conjunto">
+        <div id="contenedor" style="top:10px;left: 340px;">
+    <svg width="1000" height="1000" id="entorno">
+        <g class="objetos"><image id="1" class="numeros"  xlink:href="../img/UNIR CON LINEAS/1.png" ></g> 
+            <g  class="objetos" ><image id="2"  class="numeros" xlink:href="../img/UNIR CON LINEAS/2.png"  ></g> 
+                <g class="objetos" ><image id="3" class="numeros" xlink:href="../img/UNIR CON LINEAS/3.png" ></g> 
+                    <g class="objetos" ><image id="4" class="numeros" xlink:href="../img/UNIR CON LINEAS/4.png"  ></g> 
+                        <g class="objetos" ><image id="5" class="numeros" xlink:href="../img/UNIR CON LINEAS/5.png" ></g> 
+                            <g class="objetos" ><image id="6" class="numeros" xlink:href="../img/UNIR CON LINEAS/6.png" ></g> 
+                                <g class="objetos" ><image id="7" class="objetivo" xlink:href="../img/UNIR CON LINEAS/7.png" ></g> 
+                                    <g class="objetos"  ><image  id="8" class="objetivo" xlink:href="../img/UNIR CON LINEAS/8.png" ></g> 
+                                        <g class="objetos"  ><image id="9"  class="objetivo" xlink:href="../img/UNIR CON LINEAS/9.png"></g> 
+                                            <g class="objetos" ><image id="10"  class="objetivo" xlink:href="../img/UNIR CON LINEAS/10.png" ></g> 
+                                                <g class="objetos"  ><image id="11" class="objetivo"  xlink:href="../img/UNIR CON LINEAS/11.png" ></g> 
+                                                    <g class="objetos" ><image id="12" class="objetivo"  xlink:href="../img/UNIR CON LINEAS/12.png"></g> 
+
+            <line class="objetos"  style="display: none;" id="lineaT"  stroke-width="3" stroke="black" />`
+            <g id="ganadorr" style="display: none;"><image xlink:href="../img/UNIR CON LINEAS/ganar.gif" width="600" height="600" x="130" y="100"></g> 
+
+
+           -  <g onclick="location.reload()" style="cursor: pointer;" ><image xlink:href="../img/FONDOS/Recursos_rompecabezas/Reintentar.png" x= "900" y="10" height="100" x="100"></g>
+                <g onclick="location.href='../html/menu.html'"  style="cursor: pointer;"><image xlink:href="../img/FONDOS/Recursos_rompecabezas/Regresar.png" x= "900" y="110" height="100" x="100"></g>
+    </svg>
+</div>
+</div>
+<audio id="win" src="../media/ganador.mp3"></audio>
+    <audio id="lose" src="../media/equivocarse2.mp3"></audio>
+
+    <script src="../js/unir_lineas.js">
+    </script>
+</body>

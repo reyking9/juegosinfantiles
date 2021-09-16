@@ -1,0 +1,33 @@
+
+<html>
+<head>
+    <title>Inicio</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body onmouseover="playMusic()">
+<audio id="divAudio">
+    <source src="media/fondo_menu.mp3" type="audio/mp3">
+ </audio>
+ 
+ <script>
+    var vAudio = document.getElementById("divAudio");
+    function playMusic()
+    {
+       vAudio.play();
+       vAudio.loop = true;
+
+    }
+ </script>
+
+    <div id="principal">
+    <div id="fondo"> <img src="FONDO_INICIO.jpg"  style="width:100%;"/> </div>
+    <div id="boton_inicio>">
+        <a href="html/menu.html"    style="    position: absolute;top: 10%;left: 10%;width: 70%;height: 80%;"> <img id="Iniciar" src="BOTON_INICIO.png"></a>
+    </div>
+    <img  id="Bienvenido" src="img/Pintar_1/JUEGOS_PRINCIPAL.png" style="    position: absolute;top: 10%;left: 20%;width: 70%;height: 20%;"></div>
+    <script src="js/audio.js">
+
+   </script>
+
+</body>
+</html>

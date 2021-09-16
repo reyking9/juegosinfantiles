@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+    <script src="../js/jquery-3.2.1.min.js"></script>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dia y noche</title>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+
+<body  style="background-color: bisque;" onmousemove="playMusic()" style="overflow-y: hidden; overflow-x: scroll;touch-action: manipulation;">
+
+    <audio id="divAudio">
+       <source src="../media/fondo_nocion.mp3" type="audio/mp3">
+    </audio>
+    
+    <script>
+       var vAudio = document.getElementById("divAudio");
+       function playMusic()
+       {
+          vAudio.play();
+          vAudio.loop = true;
+   
+       }
+    </script>
+    <svg width="1200" height="900" id="entorno"> 
+	<g id="fondo"><image xlink:href="../img/Dia_noche/fondo.png" width="800" height="800" x="300" y="50"   ></g>
+    <g class="padre" id="0"><image xlink:href="../img/Dia_noche/NOCHE_1.jpg" class="movil" style="border: 3px;"></g>
+    <g class="padre" id="2"><image xlink:href="../img/Dia_noche/NOCHE_3.jpg" class="movil"></g>
+    <g class="padre" id="1"><image xlink:href="../img/Dia_noche/DIA_1.jpg" class="movil"></g>
+    <g class="padre" id="3"><image xlink:href="../img/Dia_noche/DIA_3.jpg" class="movil"></g>
+        <g  id = "win1" style="display : none;" ><image xlink:href="../img/FONDOS/Recursos_rompecabezas/GANADOR_osos.gif" width="300" height="300"  x= "0" y="150"></g>
+            <g onclick="location.reload()" style="cursor: pointer;" ><image xlink:href="../img/FONDOS/Recursos_rompecabezas/Reintentar.png" x= "0" y="30" height="100" x="100"></g>
+            <g onclick="location.href='../html/menu.html'"  style="cursor: pointer;"><image xlink:href="../img/FONDOS/Recursos_rompecabezas/Regresar.png" x= "150" y="30" height="100" x="100"></g>
+               
+</svg>
+    <audio id="win" src="../media/ganador.mp3"></audio>
+    <audio id="lose" src="../media/equivocarse2.mp3"></audio>
+
+    <script type="text/javascript" src="../js/dia_noche.js"></script>
+</body>
